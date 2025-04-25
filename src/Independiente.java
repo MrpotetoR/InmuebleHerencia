@@ -13,6 +13,7 @@ public class Independiente extends Urbana{
         this.unaHabitacion = unaHabitacion;
     }
     public void mostrarInfo(){
+        System.out.println("Individual");
         super.mostrarInfo();
 
     }

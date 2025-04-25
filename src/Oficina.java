@@ -13,6 +13,7 @@ public class Oficina extends Locales {
     }
 
     public void mostrarInfo(){
+        System.out.println("OFICINA");
         super.mostrarInfo();
         System.out.println("Gobierno si/no : "+getDeGobierno());
     }

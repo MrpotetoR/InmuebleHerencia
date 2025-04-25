@@ -17,6 +17,7 @@ public class ConjuntoCerrado extends Urbana {
         this.valorAdministrativo = valorAdministrativo;
     }
     public void mostrarInfo(){
+        System.out.println("Conjunto Cerrado");
         super.mostrarInfo();
         System.out.println("Costo Administrativo: "+getValorAdministrativo());
         System.out.println("Areas Comunes: "+getAreasComunes());

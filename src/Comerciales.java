@@ -12,6 +12,7 @@ public class Comerciales extends Locales{
         this.centroComercial = centroComercial;
     }
     public void mostrarInfo(){
+        System.out.println("LOCAL COMERCIAL");
         super.mostrarInfo();
         System.out.println("Centro comercial donde se encuentra: "+getCentroComercial());
     }

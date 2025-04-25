@@ -3,6 +3,7 @@ public class Familia extends Departamentos{
         super(id, areaMetrosCuadrados, valorCompra, direccion, numHabitaciones, numBanos, administracion);
     }
     public void mostrarInfo(){
+        System.out.println("Departamento Familiar");
         super.mostrarInfo();
     }
     public String toString() {

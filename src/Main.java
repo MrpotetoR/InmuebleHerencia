@@ -132,12 +132,7 @@ public class Main {
                                     System.out.println("1. Independiente");
                                     System.out.println("2. Conjunto cerrado ");
                                     int opcion3= sc.nextInt();
-                                    switch (opcion3){
-                                        case 1:
-                                            System.out.println("Ingresa el costo administrativo: ");
-                                            double costAdm=sc.nextInt();
-                                            System.out.println("Tiene areas comunes? (true/false)");
-                                            boolean areasComunes=sc.nextBoolean();
+
                                     }
                             }
                     }

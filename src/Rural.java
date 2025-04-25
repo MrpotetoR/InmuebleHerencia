@@ -22,6 +22,7 @@ public class Rural extends Casas{
         this.distanciaCabMuniKM = distanciaCabMuniKM;
     }
     public void mostrarInfo(){
+        System.out.println("Casa Rural");
         super.mostrarInfo();
         System.out.println("Latitud a nivel del mar: "+getLatitudNivelMar());
         System.out.println("Distancia a la cabecera Municipal: "+ getDistanciaCabMuniKM());

@@ -3,6 +3,7 @@ public class Individual extends Departamentos{
         super(id, areaMetrosCuadrados, valorCompra, direccion, numHabitaciones, numBanos, administracion);
     }
     public void mostrarInfo(){
+        System.out.println("Departamento Individual");
         super.mostrarInfo();
     }
     public String toString() {
