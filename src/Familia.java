@@ -1,5 +1,5 @@
 public class Familia extends Departamentos{
-    public Familia(int id, double areaMetrosCuadrados,double valorCompra,String direccion,int numHabitaciones,int numBanos, float administracion){
+    public Familia(int id, double areaMetrosCuadrados, double valorCompra, String direccion, int numHabitaciones, int numBanos, double administracion){
         super(id, areaMetrosCuadrados, valorCompra, direccion, numHabitaciones, numBanos, administracion);
     }
     public void mostrarInfo(){

@@ -99,16 +99,48 @@ public class Main {
                     int numHabitaciones = sc.nextInt();
                     System.out.print("Ingresa el número de baños: ");
                     int numBanos = sc.nextInt();
-                    inmueble = new Vivienda(id, area, valor, direccion, numHabitaciones, numBanos);
-                    break;
-                case 4:
-                    System.out.print("Ingresa el número de habitaciones: ");
-                    int numHabCasa = sc.nextInt();
-                    System.out.print("Ingresa el número de baños: ");
-                    int numBanosCasa = sc.nextInt();
-                    System.out.print("Ingresa la cantidad de pisos: ");
-                    int cantPisos = sc.nextInt();
-                    inmueble = new Casas(id, area, valor, direccion, numHabCasa, numBanosCasa, cantPisos);
+                    System.out.println("Seleccione el tipo de vivienda: ");
+                    System.out.println("1. Departamento");
+                    System.out.println("2. Casa");
+                    int opcion1= sc.nextInt();
+                    switch (opcion1){
+                        case 1:
+                            System.out.println("Costo de administracion: ");
+                            double costoAdmin= sc.nextDouble();
+                            if (numHabitaciones>1){
+                                inmueble=new Familia(id,area,valor,direccion,numHabitaciones,numBanos,costoAdmin);
+                            }else {
+                                inmueble=new Individual(id,area,valor,direccion,numHabitaciones,numBanos,costoAdmin);
+                            }
+                            break;
+                        case 2:
+                            System.out.println("Cantidad de pisos: ");
+                            int numPisos= sc.nextInt();
+                            System.out.println("Seleccione el tipo de casa: ");
+                            System.out.println("1. Urbana");
+                            System.out.println("2. Rural");
+                            int opcion2= sc.nextInt();
+                            switch (opcion2){
+                                case 1:
+                                    System.out.println();
+                                case 2:
+                                    System.out.println("Latitud sobre el nivel del mar: ");
+                                    float latitudNivel= sc.nextFloat();
+                                    System.out.println("Distacia en Km a la cabecera Municipal");
+                                    float distanciaMunicipal= sc.nextFloat();
+                                    System.out.println("Selecciona el tipo de casa urbana: ");
+                                    System.out.println("1. Independiente");
+                                    System.out.println("2. Conjunto cerrado ");
+                                    int opcion3= sc.nextInt();
+                                    switch (opcion3){
+                                        case 1:
+                                            System.out.println("Ingresa el costo administrativo: ");
+                                            double costAdm=sc.nextInt();
+                                            System.out.println("Tiene areas comunes? (true/false)");
+                                            boolean areasComunes=sc.nextBoolean();
+                                    }
+                            }
+                    }
                     break;
                 default:
                     System.out.println("Opción de tipo inválida.");

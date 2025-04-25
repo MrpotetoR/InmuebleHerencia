@@ -1,1 +1,2 @@
 Locales,1,10.0,100.0,Av reforma ,true
+Casas,2,15.0,200.0,Romero a4,4,2,,200.0
