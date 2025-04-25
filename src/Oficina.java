@@ -19,6 +19,6 @@ public class Oficina extends Locales {
     }
     @Override
     public String toString() {
-        return "Locales," + id + "," + areaMetrosCuadrados + "," + valorCompra + "," + direccion + "," + esInterno;
+        return "Oficina," + id + "," + areaMetrosCuadrados + "," + valorCompra + "," + direccion + "," + esInterno+","+deGobierno;
     }
 }

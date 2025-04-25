@@ -19,6 +19,6 @@ public class Comerciales extends Locales{
     }
     @Override
     public String toString() {
-        return "Locales," + id + "," + areaMetrosCuadrados + "," + valorCompra + "," + direccion + "," + esInterno+","+centroComercial;
+        return "Comercial," + id + "," + areaMetrosCuadrados + "," + valorCompra + "," + direccion + "," + esInterno+","+centroComercial;
     }
 }

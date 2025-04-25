@@ -1,9 +1,9 @@
 public class ConjuntoCerrado extends Urbana {
     private double valorAdministrativo;
     private  boolean areasComunes;
-    public ConjuntoCerrado(int id, double areaMetrosCuadrados, double valorCompra, String direccion, int numHabitantes, int numBanos, int cantPisos, double valorAdministrativo, boolean areasComunes){
+    public ConjuntoCerrado(int id, double areaMetrosCuadrados, double valorCompra, String direccion, int numHabitaciones, int numBanos, int cantPisos, double valorAdministrativo, boolean areasComunes){
 
-        super(id, areaMetrosCuadrados, valorCompra, direccion, numHabitantes, numBanos, cantPisos);
+        super(id, areaMetrosCuadrados, valorCompra, direccion, numHabitaciones, numBanos, cantPisos);
         this.valorAdministrativo=valorAdministrativo;
         this.areasComunes=areasComunes;
     }

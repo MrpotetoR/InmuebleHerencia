@@ -1,7 +1,7 @@
 public class Independiente extends Urbana{
 
-    public Independiente(int id, double areaMetrosCuadrados, double valorCompra, String direccion, int numHabitantes, int numBanos, int cantPisos){
-        super(id, areaMetrosCuadrados, valorCompra, direccion, numHabitantes, numBanos, cantPisos);
+    public Independiente(int id, double areaMetrosCuadrados, double valorCompra, String direccion, int numHabitaciones, int numBanos, int cantPisos){
+        super(id, areaMetrosCuadrados, valorCompra, direccion, numHabitaciones, numBanos, cantPisos);
 
 
     }

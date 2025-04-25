@@ -1,2 +1,2 @@
-Casas,2,15.0,400.0,San Francisco n9,4,2,2,500.0,true
-Locales,1,10.0,500.0,Centro Teca,true
+Locales,1,10.0,100.0,Aav ref,true,Santa'
+Comercial,2,10.0,100.0,Alamdremequieromatar,false,Mevalevrga
