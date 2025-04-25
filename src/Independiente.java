@@ -16,4 +16,8 @@ public class Independiente extends Urbana{
         super.mostrarInfo();
 
     }
+    public String toString() {
+        return "Casas," + id + "," + areaMetrosCuadrados + "," + valorCompra + "," + direccion + "," +
+                getNumHabitaciones() + "," + getNumBanos() + "," + cantPisos;
+    }
 }

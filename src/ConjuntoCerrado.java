@@ -21,4 +21,8 @@ public class ConjuntoCerrado extends Urbana {
         System.out.println("Costo Administrativo: "+getValorAdministrativo());
         System.out.println("Areas Comunes: "+getAreasComunes());
     }
+    public String toString() {
+        return "Casas," + id + "," + areaMetrosCuadrados + "," + valorCompra + "," + direccion + "," +
+                getNumHabitaciones() + "," + getNumBanos() + "," + cantPisos+","+valorAdministrativo+","+areasComunes;
+    }
 }

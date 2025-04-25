@@ -1,5 +1,5 @@
 public class Casas extends Vivienda {
-    private int cantPisos;
+    protected int cantPisos;
 
     public Casas(int id, double areaMetrosCuadrados, double valorCompra, String direccion, int numHabitaciones, int numBanos, int cantPisos){
 
@@ -18,5 +18,9 @@ public class Casas extends Vivienda {
         super.mostrarInfo();
         System.out.println("Cantidad de pisos: "+getCantPisos());
 
+    }
+    public String toString() {
+        return "Casas," + id + "," + areaMetrosCuadrados + "," + valorCompra + "," + direccion + "," +
+                getNumHabitaciones() + "," + getNumBanos() + "," + cantPisos;
     }
 }

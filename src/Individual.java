@@ -5,4 +5,8 @@ public class Individual extends Departamentos{
     public void mostrarInfo(){
         super.mostrarInfo();
     }
+    public String toString() {
+        return "Casas," + id + "," + areaMetrosCuadrados + "," + valorCompra + "," + direccion + "," +
+                getNumHabitaciones() + "," + getNumBanos() + "," +","+administracion;
+    }
 }

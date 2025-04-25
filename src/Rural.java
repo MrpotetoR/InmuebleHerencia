@@ -26,4 +26,8 @@ public class Rural extends Casas{
         System.out.println("Latitud a nivel del mar: "+getLatitudNivelMar());
         System.out.println("Distancia a la cabecera Municipal: "+ getDistanciaCabMuniKM());
     }
+    public String toString() {
+        return "Casas," + id + "," + areaMetrosCuadrados + "," + valorCompra + "," + direccion + "," +
+                getNumHabitaciones() + "," + getNumBanos() + "," + cantPisos+","+latitudNivelMar+distanciaCabMuniKM;
+    }
 }

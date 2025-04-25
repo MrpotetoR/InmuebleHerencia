@@ -1,6 +1,6 @@
 public class Vivienda extends Inmueble {
-    private int numHabitaciones;
-    private int numBanos;
+    protected int numHabitaciones;
+    protected int numBanos;
 
     public Vivienda(int id, double areaMetrosCuadrados, double valorCompra, String direccion, int numHabitaciones, int numBanos){
         super(id, areaMetrosCuadrados, valorCompra, direccion);
@@ -24,6 +24,10 @@ public class Vivienda extends Inmueble {
         super.mostrarInfo();
         System.out.println("Numero de Habitaciones: "+getNumHabitaciones());
         System.out.println("Numero de banos: "+getNumBanos());
+    }
+    @Override
+    public String toString() {
+        return "Vivienda," + id + "," + areaMetrosCuadrados + "," + valorCompra + "," + direccion + "," + numHabitaciones + "," + numBanos;
     }
 
 }
