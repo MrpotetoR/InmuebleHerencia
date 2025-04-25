@@ -21,12 +21,14 @@ public class Rural extends Casas{
     public void setDistanciaCabMuniKM(float distanciaCabMuniKM) {
         this.distanciaCabMuniKM = distanciaCabMuniKM;
     }
+    @Override
     public void mostrarInfo(){
         System.out.println("Casa Rural");
         super.mostrarInfo();
         System.out.println("Latitud a nivel del mar: "+getLatitudNivelMar());
         System.out.println("Distancia a la cabecera Municipal: "+ getDistanciaCabMuniKM());
     }
+    @Override
     public String toString() {
         return "Casas," + id + "," + areaMetrosCuadrados + "," + valorCompra + "," + direccion + "," +
                 getNumHabitaciones() + "," + getNumBanos() + "," + cantPisos+","+latitudNivelMar+distanciaCabMuniKM;

@@ -11,9 +11,14 @@ public class Comerciales extends Locales{
     public void setCentroComercial(String centroComercial) {
         this.centroComercial = centroComercial;
     }
+    @Override
     public void mostrarInfo(){
         System.out.println("LOCAL COMERCIAL");
         super.mostrarInfo();
         System.out.println("Centro comercial donde se encuentra: "+getCentroComercial());
+    }
+    @Override
+    public String toString() {
+        return "Locales," + id + "," + areaMetrosCuadrados + "," + valorCompra + "," + direccion + "," + esInterno+","+centroComercial;
     }
 }

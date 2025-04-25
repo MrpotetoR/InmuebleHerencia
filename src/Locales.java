@@ -14,7 +14,7 @@ public class Locales extends Inmueble{
     @Override
     public void mostrarInfo(){
        super.mostrarInfo();
-       System.out.println("Interno o Externo: "+getEsInterno());
+       System.out.println("Interno: "+getEsInterno());
     }
     @Override
     public String toString() {

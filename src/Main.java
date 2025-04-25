@@ -55,7 +55,7 @@ public class Main {
         System.out.println("3. Vivienda");
         System.out.print("Seleccione una opción: ");
         int opcionTipo = sc.nextInt();
-        sc.nextLine(); // Consumir salto de línea
+        sc.nextLine();
 
         try {
             System.out.print("Ingresa el id del inmueble: ");
@@ -82,6 +82,7 @@ public class Main {
                     System.out.println("Seleccione el tipo de Local: ");
                     int option= sc.nextInt();
                     sc.nextLine();
+
                     switch (option){
                         case 1:
                             System.out.println("Centro comercial donde se ubica: ");
@@ -92,6 +93,10 @@ public class Main {
                             System.out.println("La oficina es de gobierno? (true/false): ");
                             boolean gobierno=sc.nextBoolean();
                             inmueble=new Oficina(id,area,valor,direccion,esInterno,gobierno);
+                            break;
+                        default:
+                            System.out.println("Opcion Invalida!!");
+                            break;
                     }
                     break;
                 case 3:
@@ -122,18 +127,25 @@ public class Main {
                             int opcion2= sc.nextInt();
                             switch (opcion2){
                                 case 1:
-                                    System.out.println();
+                                    System.out.println("La casa es de Conjunto Cerrado? (true/false) ");
+                                    boolean conjuntoCerrado=sc.nextBoolean();
+                                    if (!conjuntoCerrado){
+                                        inmueble = new Independiente(id,area,valor,direccion,numHabitaciones,numBanos,numPisos);
+                                    }else {
+                                        System.out.println("Tiene areas comunes? (true/false)");
+                                        boolean areasComunes=sc.nextBoolean();
+                                        System.out.println("Costo de Administracion: ");
+                                        double costoAdmin1=sc.nextDouble();
+                                        inmueble = new ConjuntoCerrado(id,area,valor,direccion,numHabitaciones,numBanos,numPisos,costoAdmin1,areasComunes);
+                                    }
+                                    break;
                                 case 2:
                                     System.out.println("Latitud sobre el nivel del mar: ");
                                     float latitudNivel= sc.nextFloat();
                                     System.out.println("Distacia en Km a la cabecera Municipal");
                                     float distanciaMunicipal= sc.nextFloat();
-                                    System.out.println("Selecciona el tipo de casa urbana: ");
-                                    System.out.println("1. Independiente");
-                                    System.out.println("2. Conjunto cerrado ");
-                                    int opcion3= sc.nextInt();
-
-                                    }
+                                    inmueble=new Rural(id,area,valor,direccion,numHabitaciones,numBanos,numPisos,latitudNivel,distanciaMunicipal);
+                                    break;
                             }
                     }
                     break;
@@ -165,7 +177,7 @@ public class Main {
         if (inmuebles.isEmpty()) {
             System.out.println("No hay inmuebles registrados.");
         } else {
-            System.out.println("Listado de inmuebles:");
+            System.out.println("\nListado de inmuebles:");
             for (Inmueble inmueble : inmuebles) {
                 inmueble.mostrarInfo();
                 System.out.println("--------------------------");

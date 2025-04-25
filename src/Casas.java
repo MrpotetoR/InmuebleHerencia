@@ -14,11 +14,13 @@ public class Casas extends Vivienda {
     public void setCantPisos(int cantPisos) {
         this.cantPisos = cantPisos;
     }
+    @Override
     public void mostrarInfo(){
         super.mostrarInfo();
         System.out.println("Cantidad de pisos: "+getCantPisos());
 
     }
+    @Override
     public String toString() {
         return "Casas," + id + "," + areaMetrosCuadrados + "," + valorCompra + "," + direccion + "," +
                 getNumHabitaciones() + "," + getNumBanos() + "," + cantPisos;

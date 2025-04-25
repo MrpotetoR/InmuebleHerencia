@@ -20,6 +20,7 @@ public class Vivienda extends Inmueble {
     public void setNumBanos(int numBanos) {
         this.numBanos = numBanos;
     }
+    @Override
     public void mostrarInfo(){
         super.mostrarInfo();
         System.out.println("Numero de Habitaciones: "+getNumHabitaciones());

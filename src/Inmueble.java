@@ -49,7 +49,7 @@ public class Inmueble {
     }
 
 
-    @Override
+
     public String toString() {
         return "Inmueble,"+ id + "," + areaMetrosCuadrados + "," + valorCompra + "," + direccion;
     }

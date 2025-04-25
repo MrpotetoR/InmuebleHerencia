@@ -11,12 +11,13 @@ public class Oficina extends Locales {
     public void setDeGobierno(boolean deGobierno) {
         this.deGobierno = deGobierno;
     }
-
+    @Override
     public void mostrarInfo(){
         System.out.println("OFICINA");
         super.mostrarInfo();
         System.out.println("Gobierno si/no : "+getDeGobierno());
     }
+    @Override
     public String toString() {
         return "Locales," + id + "," + areaMetrosCuadrados + "," + valorCompra + "," + direccion + "," + esInterno;
     }

@@ -11,10 +11,12 @@ public class Departamentos extends Vivienda{
     public void setAdministracion(double administracion) {
         this.administracion = administracion;
     }
+    @Override
     public void mostrarInfo(){
         super.mostrarInfo();
         System.out.println("Costo de Administracion: "+getAdministracion());
     }
+    @Override
     public String toString() {
         return "Casas," + id + "," + areaMetrosCuadrados + "," + valorCompra + "," + direccion + "," +
                 getNumHabitaciones() + "," + getNumBanos() + "," +","+administracion;
