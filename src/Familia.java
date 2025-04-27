@@ -4,7 +4,7 @@ public class Familia extends Departamentos{
     }
     @Override
     public void mostrarInfo(){
-        System.out.println("Departamento Familiar");
+        System.out.println("DEPARTAMENTO FAMILIAR");
         super.mostrarInfo();
     }
     @Override

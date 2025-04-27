@@ -13,7 +13,6 @@ public class Independiente extends Urbana{
     }
     @Override
     public String toString() {
-        return "INDEPENDIENTE," + id + "," + areaMetrosCuadrados + "," + valorCompra + "," + direccion + "," +
-                numHabitaciones + "," + numBanos + "," + cantPisos;
+        return "INDEPENDIENTE," + id + "," + areaMetrosCuadrados + "," + valorCompra + "," + direccion + "," + numHabitaciones + "," + numBanos + "," + cantPisos;
     }
 }

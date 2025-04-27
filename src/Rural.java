@@ -23,14 +23,13 @@ public class Rural extends Casas{
     }
     @Override
     public void mostrarInfo(){
-        System.out.println("Casa Rural");
+        System.out.println("CASA RURAL");
         super.mostrarInfo();
         System.out.println("Latitud a nivel del mar: "+getLatitudNivelMar());
         System.out.println("Distancia a la cabecera Municipal: "+ getDistanciaCabMuniKM());
     }
     @Override
     public String toString() {
-        return "RURAL," + id + "," + areaMetrosCuadrados + "," + valorCompra + "," + direccion + "," +
-                numHabitaciones + "," +numBanos + "," + cantPisos+","+latitudNivelMar+distanciaCabMuniKM;
+        return "RURAL," + id + "," + areaMetrosCuadrados + "," + valorCompra + "," + direccion + "," + numHabitaciones + "," +numBanos + "," + cantPisos+","+latitudNivelMar+","+distanciaCabMuniKM;
     }
 }

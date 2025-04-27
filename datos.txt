@@ -1,3 +1,11 @@
 
 COMERCIAL,2,10.0,100.0,Alamdremequieromatar,false,Mevalevrga
 COMERCIAL,1,10.0,100.0,Sanka,true,MELAkjj
+OFICINA,3,40.0,200.0,Santa colo,false,true
+CONJUNTOCERRADO,4,20.0,400.0,Sajlfkdl,4,2,3,40000.0,true
+FAMILIA,5,30.0,200.0,ASJDHAKJ,6,2,50000.0
+RURAL,7,40.0,500.0,aaaaaaa,4,2,2,40.0,10.0
+OFICINA,8,-500.0,-10.0,-44AAAAAA,true,false
+CONJUNTOCERRADO,9,10.0,20.0,asdadasda,4,2,2,400.0,true
+FAMILIA,10,20.0,20.0,sdsdfdssdsdsd,4,2,550.0
+

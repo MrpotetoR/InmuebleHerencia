@@ -49,34 +49,28 @@ public class Main {
 
 
     private static void agregarInmueble() {
-        System.out.println("Seleccione el tipo de inmueble a agregar:");
-        System.out.println("1. Inmueble general");
-        System.out.println("2. Local");
-        System.out.println("3. Vivienda");
-        System.out.print("Seleccione una opción: ");
-        int opcionTipo = sc.nextInt();
-        sc.nextLine();
-
+            double valor;
+            System.out.println("Seleccione el tipo de inmueble a agregar:");
+            System.out.println("1. Local");
+            System.out.println("2. Vivienda");
+            System.out.print("Seleccione una opción: ");
+            int opcionTipo = sc.nextInt();
+            sc.nextLine();
         try {
             System.out.print("Ingresa el id del inmueble: ");
             int id = sc.nextInt();
             System.out.print("Ingresa el área en m²: ");
             double area = sc.nextDouble();
-            System.out.print("Ingresa el valor por m²: ");
-            double valor = sc.nextDouble();
-            sc.nextLine(); // Consumir salto de línea pendiente
+            sc.nextLine();
             System.out.print("Ingresa la dirección: ");
             String direccion = sc.nextLine();
 
             Inmueble inmueble = null;
             switch (opcionTipo) {
                 case 1:
-                    inmueble = new Inmueble(id, area, valor, direccion);
-                    break;
-                case 2:
                     System.out.print("¿El local es interno? (true/false): ");
                     boolean esInterno = sc.nextBoolean();
-                    System.out.println("|||||TIPO||||||");
+                    System.out.println("TIPO: ");
                     System.out.println("1. Local Comercial");
                     System.out.println("2. Oficina" );
                     System.out.println("Seleccione el tipo de Local: ");
@@ -85,21 +79,25 @@ public class Main {
 
                     switch (option){
                         case 1:
+                            valor=3000;
+                            System.out.print("Valor por m²: "+valor);
                             System.out.println("Centro comercial donde se ubica: ");
                             String centroComercial= sc.nextLine();
                             inmueble=new Comerciales(id,area,valor,direccion,centroComercial,esInterno);
                             break;
                         case 2:
+                            valor=3500;
+                            System.out.println("Valor por m²: "+valor);
                             System.out.println("La oficina es de gobierno? (true/false): ");
                             boolean gobierno=sc.nextBoolean();
                             inmueble=new Oficina(id,area,valor,direccion,esInterno,gobierno);
                             break;
                         default:
                             System.out.println("Opcion Invalida!!");
-                            break;
+                            return;
                     }
                     break;
-                case 3:
+                case 2:
                     System.out.print("Ingresa el número de habitaciones: ");
                     int numHabitaciones = sc.nextInt();
                     System.out.print("Ingresa el número de baños: ");
@@ -110,11 +108,15 @@ public class Main {
                     int opcion1= sc.nextInt();
                     switch (opcion1){
                         case 1:
+                            valor=2000;
+                            System.out.print("Valor por m²: "+valor);
                             System.out.println("Costo de administracion: ");
                             double costoAdmin= sc.nextDouble();
                             if (numHabitaciones>1){
                                 inmueble=new Familia(id,area,valor,direccion,numHabitaciones,numBanos,costoAdmin);
                             }else {
+                                valor=1500;
+                                System.out.print("Valor por m²: "+valor);
                                 inmueble=new Individual(id,area,valor,direccion,numHabitaciones,numBanos,costoAdmin);
                             }
                             break;
@@ -130,8 +132,12 @@ public class Main {
                                     System.out.println("La casa es de Conjunto Cerrado? (true/false) ");
                                     boolean conjuntoCerrado=sc.nextBoolean();
                                     if (!conjuntoCerrado){
+                                        valor=3000;
+                                        System.out.print("Valor por m²: "+valor);
                                         inmueble = new Independiente(id,area,valor,direccion,numHabitaciones,numBanos,numPisos);
                                     }else {
+                                        valor=2500;
+                                        System.out.print("Valor por m²: "+valor);
                                         System.out.println("Tiene areas comunes? (true/false)");
                                         boolean areasComunes=sc.nextBoolean();
                                         System.out.println("Costo de Administracion: ");
@@ -140,6 +146,8 @@ public class Main {
                                     }
                                     break;
                                 case 2:
+                                    valor=1500;
+                                    System.out.print("Valor por m²: "+valor);
                                     System.out.println("Latitud sobre el nivel del mar: ");
                                     float latitudNivel= sc.nextFloat();
                                     System.out.println("Distacia en Km a la cabecera Municipal");
@@ -158,7 +166,7 @@ public class Main {
             System.out.println("Inmueble creado correctamente.");
         } catch (Exception e) {
             System.out.println("Error al ingresar datos: " + e.getMessage());
-            sc.nextLine(); // Limpiar buffer en caso de error
+            sc.nextLine();
         }
     }
 
@@ -189,7 +197,7 @@ public class Main {
     private static void actualizarInmueble() {
         System.out.print("Ingresa el id del inmueble a actualizar: ");
         int id = sc.nextInt();
-        sc.nextLine(); // Consumir salto de línea
+        sc.nextLine();
         Inmueble inmuebleEncontrado = null;
         for (Inmueble inmueble : inmuebles) {
             if (inmueble.getId() == id) {

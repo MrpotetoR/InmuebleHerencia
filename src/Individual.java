@@ -4,7 +4,7 @@ public class Individual extends Departamentos{
     }
     @Override
     public void mostrarInfo(){
-        System.out.println("Departamento Individual");
+        System.out.println("DEPARTAMENTO INDIVIDUAL");
         super.mostrarInfo();
     }
     @Override
