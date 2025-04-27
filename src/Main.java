@@ -176,7 +176,7 @@ public class Main {
 
     private static void agregarInmueble() {
         double valor;
-        System.out.println("Seleccione el tipo de inmueble a agregar:");
+        System.out.println("\nSeleccione el tipo de inmueble a agregar:");
         System.out.println("1. Local");
         System.out.println("2. Vivienda");
         System.out.print("Seleccione una opción: ");
@@ -195,7 +195,7 @@ public class Main {
                 case 1:
                     System.out.print("¿El local es interno? ");
                     boolean esInterno = validarInterno();
-                    System.out.println("Tipos de local: ");
+                    System.out.println("\nTipos de local: ");
                     System.out.println("1. Local Comercial");
                     System.out.println("2. Oficina");
                     int option = validarSegundaOpcion();
@@ -226,7 +226,7 @@ public class Main {
                     int numHabitaciones = validarValorInt();
                     System.out.println("Cantidad de banos ");
                     int numBanos = validarValorInt();
-                    System.out.println("Tipos de vivienda: ");
+                    System.out.println("\nTipos de vivienda: ");
                     System.out.println("1. Departamento");
                     System.out.println("2. Casa");
                     int opcion1 = validarSegundaOpcion();
@@ -247,7 +247,7 @@ public class Main {
                         case 2:
                             System.out.println("Cantidad de pisos: ");
                             int numPisos = validarValorInt();
-                            System.out.println("Seleccione el tipo de casa: ");
+                            System.out.println("\nSeleccione el tipo de casa: ");
                             System.out.println("1. Urbana");
                             System.out.println("2. Rural");
                             int opcion2 = validarSegundaOpcion();
