@@ -307,20 +307,41 @@ public class Main {
 
     private static void cargarDatos() {
         File archivo = new File(ARCHIVO);
-        if (archivo.exists()) {
-            try (BufferedReader reader = new BufferedReader(new FileReader(archivo))) {
-                String linea;
-                while ((linea = reader.readLine()) != null) {
-                    try {
-                        Inmueble inmueble = Inmueble.fromString(linea);
-                        inmuebles.add(inmueble);
-                    } catch (Exception e) {
-                        System.out.println("Error al procesar la línea: " + linea);
+        if (!archivo.exists()) {
+            System.out.println("Archivo no encontrado. Se creará uno nuevo.");
+            return;
+        }
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(archivo))) {
+            String linea;
+            int lineasCargadas = 0;
+            int errores = 0;
+
+            System.out.println("\nCargando datos del archivo...");
+
+            while ((linea = reader.readLine()) != null) {
+                try {
+                    // Saltar líneas vacías o comentarios
+                    if (linea.trim().isEmpty() || linea.trim().startsWith("#")) {
+                        continue;
                     }
+
+                    Inmueble inmueble = Inmueble.fromString(linea);
+                    inmuebles.add(inmueble);
+                    lineasCargadas++;
+
+                } catch (Exception e) {
+                    errores++;
+                    System.err.println("Error en línea: " + linea);
+                    System.err.println("Razón: " + e.getMessage());
                 }
-            } catch (Exception e) {
-                System.out.println("Error al cargar datos: " + e.getMessage());
             }
+
+            System.out.printf("Carga completada. %d inmuebles cargados, %d errores.%n",
+                    lineasCargadas, errores);
+
+        } catch (Exception e) {
+            System.err.println("Error fatal al leer archivo: " + e.getMessage());
         }
     }
 }

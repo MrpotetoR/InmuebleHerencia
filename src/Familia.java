@@ -9,7 +9,6 @@ public class Familia extends Departamentos{
     }
     @Override
     public String toString() {
-        return "Casas," + id + "," + areaMetrosCuadrados + "," + valorCompra + "," + direccion + "," +
-                getNumHabitaciones() + "," + getNumBanos() + "," +","+administracion;
+        return "FAMILIA," + id + "," + areaMetrosCuadrados + "," + valorCompra + "," + direccion + "," + numHabitaciones + "," + numBanos +","+administracion;
     }
 }

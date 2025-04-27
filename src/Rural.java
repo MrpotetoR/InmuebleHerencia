@@ -30,7 +30,7 @@ public class Rural extends Casas{
     }
     @Override
     public String toString() {
-        return "Casas," + id + "," + areaMetrosCuadrados + "," + valorCompra + "," + direccion + "," +
-                getNumHabitaciones() + "," + getNumBanos() + "," + cantPisos+","+latitudNivelMar+distanciaCabMuniKM;
+        return "RURAL," + id + "," + areaMetrosCuadrados + "," + valorCompra + "," + direccion + "," +
+                numHabitaciones + "," +numBanos + "," + cantPisos+","+latitudNivelMar+distanciaCabMuniKM;
     }
 }

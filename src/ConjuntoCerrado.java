@@ -25,7 +25,7 @@ public class ConjuntoCerrado extends Urbana {
     }
     @Override
     public String toString() {
-        return "Casas," + id + "," + areaMetrosCuadrados + "," + valorCompra + "," + direccion + "," +
-                getNumHabitaciones() + "," + getNumBanos() + "," + cantPisos+","+valorAdministrativo+","+areasComunes;
+        return "CONJUNTOCERRADO," + id + "," + areaMetrosCuadrados + "," + valorCompra + "," + direccion + "," +
+                numHabitaciones + "," + numBanos + "," + cantPisos+","+valorAdministrativo+","+areasComunes;
     }
 }

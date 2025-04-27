@@ -71,19 +71,19 @@ public class Inmueble {
         String direccion = partes[4];
 
         switch (tipo) {
-            case "Inmueble":
+            case "INMUEBLE":
 
                 return new Inmueble(id, area, valor, direccion);
 
-            case "Comercial":
+            case "COMERCIAL":
 
-                if (partes.length != 8)
+                if (partes.length != 7)
                     throw new IllegalArgumentException("Formato de Comerciales incorrecto: " + str);
                 boolean esInterno = Boolean.parseBoolean(partes[5]);
                 String centroComercial = partes[6];
                 return new Comerciales(id, area, valor, direccion, centroComercial, esInterno);
 
-            case "Oficina":
+            case "OFICINA":
 
                 if (partes.length != 7)
                     throw new IllegalArgumentException("Formato de Oficina incorrecto: " + str);
@@ -91,7 +91,7 @@ public class Inmueble {
                 boolean deGobierno = Boolean.parseBoolean(partes[6]);
                 return new Oficina(id, area, valor, direccion, esInterno, deGobierno);
 
-            case "Rural":
+            case "RURAL":
 
                 if (partes.length != 10)
                     throw new IllegalArgumentException("Formato de Rural incorrecto: " + str);
@@ -102,7 +102,7 @@ public class Inmueble {
                 float distanciaCabMuniKM = Float.parseFloat(partes[9]);
                 return new Rural(id, area, valor, direccion, numHabitacionesCasa, numBanosCasa, cantPisos, latitudNivelMar, distanciaCabMuniKM);
 
-            case "Familia":
+            case "FAMILIA":
 
                 if (partes.length != 8)
                     throw new IllegalArgumentException("Formato de Familia incorrecto: " + str);
@@ -111,7 +111,7 @@ public class Inmueble {
                 double administracion = Double.parseDouble(partes[7]);
                 return new Familia(id, area, valor, direccion, numHabitacionesCasa, numBanosCasa, administracion);
 
-            case "Individual":
+            case "INDIVIDUAL":
 
                 if (partes.length != 8)
                     throw new IllegalArgumentException("Formato de Individual incorrecto: " + str);
@@ -120,7 +120,7 @@ public class Inmueble {
                 administracion = Double.parseDouble(partes[7]);
                 return new Individual(id, area, valor, direccion, numHabitacionesCasa, numBanosCasa, administracion);
 
-            case "ConjuntoCerrado":
+            case "CONJUNTOCERRADO":
 
                 if (partes.length != 10)
                     throw new IllegalArgumentException("Formato de ConjuntoCerrado incorrecto: " + str);
@@ -131,7 +131,7 @@ public class Inmueble {
                 boolean areasComunes = Boolean.parseBoolean(partes[9]);
                 return new ConjuntoCerrado(id, area, valor, direccion, numHabitacionesCasa, numBanosCasa, cantPisos, administracion, areasComunes);
 
-            case "Independiente":
+            case "INDEPENDIENTE":
 
                 if (partes.length != 8)
                     throw new IllegalArgumentException("Formato de Independiente incorrecto: " + str);

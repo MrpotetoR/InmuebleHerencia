@@ -9,7 +9,6 @@ public class Individual extends Departamentos{
     }
     @Override
     public String toString() {
-        return "Casas," + id + "," + areaMetrosCuadrados + "," + valorCompra + "," + direccion + "," +
-                getNumHabitaciones() + "," + getNumBanos() + "," +","+administracion;
+        return "INDIVIDUAL," + id + "," + areaMetrosCuadrados + "," + valorCompra + "," + direccion + "," + numHabitaciones+ "," + numBanos +","+administracion;
     }
 }

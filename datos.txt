@@ -1,2 +1,3 @@
-Locales,1,10.0,100.0,Aav ref,true,Santa'
-Comercial,2,10.0,100.0,Alamdremequieromatar,false,Mevalevrga
+
+COMERCIAL,2,10.0,100.0,Alamdremequieromatar,false,Mevalevrga
+COMERCIAL,1,10.0,100.0,Sanka,true,MELAkjj
